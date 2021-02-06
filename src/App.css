@@ -1,0 +1,122 @@
+.App {
+padding: 10px;
+margin-left: 80px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.search-bar {
+margin-right:10px;
+}
+
+.user-container {
+  display: grid;
+  max-width: 768px;
+  width:85%;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 100 px 100 px;
+}
+
+.container h2 {
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+.search-bar {
+margin-top: 10px;
+}
+
+.container img {
+  float: left;
+  height: 55px;
+  width: 60px;
+}
+
+.card-grid {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 20px;
+}
+
+.card {
+ height:400px;
+ width: 300px;
+ background: #FFF;
+ border-radius: 6px;
+ box-shadow: 5px 5px 15px rgba(0,0,0,9);
+ overflow: hidden;
+}
+
+.upper-container {
+ height: 150px;
+ background: #7F00FF;
+}
+
+.image-container {
+ background: white;
+ width: 80px;
+ height: 80px;
+ border-radius: 50%;
+ padding: 5px;
+ transform: translate(100px,100px);
+}
+
+.image-container img{
+ width: 80px;
+ height: 80px;
+ border-radius: 50%;
+}
+
+.lower-container {
+  height: 200px;
+  font-size: 20px;
+  background: coral;
+  padding: 20px;
+  padding-top: 40px;
+  text-align: center;
+}
+.lower-container h2 {
+ box-sizing: border-box;
+ line-height: 0.6;
+}
+
+@media (max-width: 768px) {
+ .card-grid {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100 px 100 px;
+ }
+
+}
