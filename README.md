@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Getting Started with Github-Search React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To create a project in react executed the below command :
+
+npx create-react-app github-search
 
 ## Available Scripts
 
@@ -11,60 +13,35 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Overview :
 
-### `npm test`
+Before starting to code the app, I did analysis around how all the requirements can be 
+seprated into different independent components. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Below are the components present in the app :
+1. App Component
+2. HomePage Component
+3. GitHubProfile Component
+4. GithubRepo Component
 
-### `npm run build`
+1. App Component :
+This is the parent component. In App Component I have passed the HomPage Component  
+   where all the logic is written.
+   
+2. HomePage Component :
+In HomePage component, all the userinput State and calling the external GithubApi
+   with debouncing is written. In this component i have passed two child components
+   GithubProfileCard (User profile) and GithubRepo (Repository details).
+   
+3. GithubProfile :
+ In this component, the user profile values for the fields are passed through props from the 
+   HomePage Component and the values are being rendered in the card.
+   
+4. GithubRepo :
+   In this component, the repository values for the fields are passed through props from the
+   HomePage Component and the values are being rendered in the card.
+   
+5.index.css :
+Have maintained the Css for the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
