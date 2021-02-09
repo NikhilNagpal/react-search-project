@@ -1,6 +1,11 @@
 import React from "react";
 
-const GithubProfileCard = ({name, image}) => {
+interface GithubProfileCardProps {
+  name: string;
+  image: string;
+}
+
+const GithubProfileCard: React.FC<GithubProfileCardProps> = ({name, image}) => {
   return (
     <div>
       <div className="card">

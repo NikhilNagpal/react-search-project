@@ -1,6 +1,12 @@
 import React from "react";
 
-const GithubRepo = ({name, stars, url}) => {
+interface GithubRepoProps {
+  name: string;
+  stars: string;
+  url: string;
+}
+
+const GithubRepo: React.FC<GithubRepoProps> = ({name, stars, url}) => {
 
     return (
        <div>
@@ -14,8 +20,6 @@ const GithubRepo = ({name, stars, url}) => {
                       <a href={url}>{name}</a>
                       <h3>Star rating: {stars} Stars</h3>
                </div>
-
-           )}
          </div>
       </div>
     );

@@ -1,4 +1,4 @@
-import React, { useState, useCallback, Fragment } from "react";
+import React, { useState, useCallback, Fragment} from "react";
 import _ from "lodash";
 import GithubProfileCard from "./GithubProfileCard";
 import GithubRepo from "./GithubRepo";
@@ -10,17 +10,17 @@ const HomePage = () => {
     queryString: "",
     UserRepoOptions: "users",
   }),
-  [searchResult, setSearchResult] = useState([]);
+  [searchResult, setSearchResult] = useState<any[]>([]);
 
 
   // User and Repository Dropdown handling
-  const handleUserRepoOptions = e => {
+  const handleUserRepoOptions = (e: { target: HTMLSelectElement }) => {
     const updatedState = {...state, UserRepoOptions: e.target.value};
     setState(updatedState);
     searchUser(updatedState);
   };
 
-  const inputHandler = e => {
+   const inputHandler = (e: { target: HTMLInputElement }) => {
     const updatedState = {...state, queryString: e.target.value};
     setState(updatedState);
     searchUser(updatedState);
@@ -62,7 +62,6 @@ const HomePage = () => {
           <div className="card-body">
             <div className="search-bar">
               <input
-                size="35"
                 className="search-bar"
                 type="text"
                 value={queryString}
